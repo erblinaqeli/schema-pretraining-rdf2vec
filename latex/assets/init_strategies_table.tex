@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\caption{Quantitative comparison of the four class-hierarchy initialization strategies on the synthetic DLCC test cases \texttt{tc01}--\texttt{tc15}, under one fixed budget ($\dim=200$, 100 instance walks/entity, depth 3, $5+5$ epochs, $\lambda=0.5$, from-scratch fine-tuning rate $0.025$, single run per cell). \emph{Coverage} is the mean fraction of typed instances that receive a class-based initialization (rather than a random one); \emph{init} and \emph{final} are mean LogReg test accuracy at epoch 0 and epoch 5, averaged over all 15 test cases. The \texttt{vanilla} row is from-scratch RDF2Vec. This is an independent run from the headline Table~\ref{tab:synthetic_final}, so the \texttt{most\_specific} means differ slightly between the two (e.g.\ P3 $0.742$ here vs.\ \texttt{p3\_classic} $0.774$ there).}
+\label{tab:init_strategies}
+\begin{tabular}{llrrr}
+\toprule
+Protograph & Strategy & Coverage (\%) & Acc@init & Acc@final \\
+\midrule
+- & \texttt{vanilla} & -- & 0.488 & 0.739 \\
+\midrule
+P1 & \texttt{most\_specific} & 58.5 & 0.573 & 0.752 \\
+P1 & \texttt{all\_init} & 100.0 & 0.576 & 0.621 \\
+P1 & \texttt{average\_hier} & 100.0 & 0.565 & 0.565 \\
+P1 & \texttt{weight\_hierarchy} & 100.0 & 0.576 & 0.574 \\
+\midrule
+P2 & \texttt{most\_specific} & 88.1 & 0.567 & 0.769 \\
+P2 & \texttt{all\_init} & 100.0 & 0.564 & 0.758 \\
+P2 & \texttt{average\_hier} & 100.0 & 0.567 & 0.641 \\
+P2 & \texttt{weight\_hierarchy} & 100.0 & 0.572 & 0.743 \\
+\midrule
+P3 & \texttt{most\_specific} & 100.0 & 0.578 & 0.742 \\
+P3 & \texttt{all\_init} & 100.0 & 0.578 & 0.746 \\
+P3 & \texttt{average\_hier} & 100.0 & 0.570 & 0.589 \\
+P3 & \texttt{weight\_hierarchy} & 100.0 & 0.577 & 0.681 \\
+\bottomrule
+\end{tabular}
+\end{table}

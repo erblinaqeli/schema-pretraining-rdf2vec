@@ -1,0 +1,30 @@
+\begin{table}[p]
+\centering
+\small
+\caption{Per-test-case final LogReg test accuracy for the protograph anchoring sweep, \textbf{averaged over the three transfers P1, P2 and P3} (\texttt{most\_specific} initialization, normalized codes): \texttt{vanilla} baseline, the un-anchored transfer ($\lambda=0$), and each anchoring strength $\lambda$. Each cell is the mean of the corresponding P1/P2/P3 values (the \texttt{vanilla} baseline is identical across transfers). The best $\lambda$ value in each row is in bold; the bottom row is the mean over the fourteen test cases (\texttt{tc01}--\texttt{tc15}, excl.\ \texttt{tc04}).}
+\label{tab:anchoring_pertc_avg}
+\begin{tabular}{l r rrrrrr}
+\toprule
+ & & \multicolumn{6}{c}{anchoring strength $\lambda$} \\
+\cmidrule(lr){3-8}
+TC & \texttt{vanilla} & $0$ & $0.1$ & $0.25$ & $0.5$ & $0.75$ & $1.0$ \\
+\midrule
+\texttt{tc01} & 0.943 & \textbf{0.950} & 0.947 & 0.947 & 0.926 & 0.830 & 0.584 \\
+\texttt{tc02} & 0.843 & \textbf{0.868} & 0.853 & 0.848 & 0.804 & 0.678 & 0.540 \\
+\texttt{tc03} & 0.930 & \textbf{0.928} & 0.922 & 0.919 & 0.888 & 0.775 & 0.578 \\
+\texttt{tc05} & 0.830 & 0.938 & 0.937 & \textbf{0.944} & 0.942 & 0.927 & 0.930 \\
+\texttt{tc06} & 0.983 & \textbf{0.984} & \textbf{0.984} & \textbf{0.984} & 0.970 & 0.888 & 0.599 \\
+\texttt{tc07} & 0.570 & 0.540 & \textbf{0.560} & 0.543 & 0.542 & 0.526 & 0.501 \\
+\texttt{tc08} & 0.610 & \textbf{0.565} & 0.563 & 0.553 & 0.542 & 0.531 & 0.517 \\
+\texttt{tc09} & 0.642 & \textbf{0.624} & 0.623 & 0.607 & 0.600 & 0.578 & 0.525 \\
+\texttt{tc10} & 0.637 & 0.650 & \textbf{0.653} & 0.632 & 0.633 & 0.588 & 0.513 \\
+\texttt{tc11} & 0.637 & \textbf{0.635} & 0.607 & 0.604 & 0.577 & 0.541 & 0.499 \\
+\texttt{tc12} & 0.677 & 0.673 & 0.676 & 0.660 & 0.673 & \textbf{0.681} & 0.633 \\
+\texttt{tc13} & 0.510 & 0.559 & \textbf{0.562} & 0.551 & 0.560 & 0.546 & 0.500 \\
+\texttt{tc14} & 0.671 & 0.991 & 0.997 & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} \\
+\texttt{tc15} & 0.510 & \textbf{0.567} & 0.560 & 0.560 & 0.532 & 0.525 & 0.521 \\
+\midrule
+\textbf{mean} & 0.714 & \textbf{0.748} & 0.746 & 0.740 & 0.728 & 0.687 & 0.603 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,54 @@
+# P1/P2 pretrain hyperparameter lists for scripts/search.py (random search by default; --grid-search for full grid)
+# Finetune / instance settings are fixed to match scripts/train.py defaults.
+
+pretrain:
+  walks:
+    mode:
+      - jrdf2vec-duplicate-free
+    depth:
+      - 4
+      - 8
+      - 12
+    walks_per_entity:
+      - 100
+      - 200
+      - 300
+      - 400
+
+  word2vec:
+    pretrain_epochs:
+      - 5
+      - 7
+      - 10
+    pretrain_lr:
+      - 0.025
+      - 0.010
+      - 0.001
+
+# Fixed finetune stage (not searched) — aligned with e2e_synthetic.py
+finetune:
+  walks:
+    mode:
+      - jrdf2vec-duplicate-free
+    depth:
+      - 4
+    walks_per_entity:
+      - 100
+
+  word2vec:
+    architecture:
+      - skipgram
+    dim:
+      - 100
+    window:
+      - 5
+    lr:
+      - 0.025
+    min_alpha:
+      - 0.0001
+    negative:
+      - 5
+    min_count:
+      - 1
+    finetune_epochs:
+      - 5

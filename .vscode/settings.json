@@ -1,0 +1,46 @@
+{
+  // LaTeX Workshop build recipes.
+  // "Build (full)" is the default (Ctrl/Cmd+Alt+B) and produces the final PDF
+  // with all images, cross-references and bibliography.
+  // "Build (fast draft)" runs a single pdflatex pass with graphicx in draft mode
+  // (images drawn as boxes) -- ~1s instead of ~35s. Use it while editing; it does
+  // NOT refresh citations/cross-references. Run the full build before finalizing.
+  // Switch recipes via: command palette -> "LaTeX Workshop: Build with recipe".
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex-draft",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-jobname=%DOCFILE%",
+        "\\PassOptionsToPackage{draft}{graphicx}\\input{%DOC%}"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Build (full)",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "Build (fast draft)",
+      "tools": ["pdflatex-draft"]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+data/
+processed/
+schema/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+
+docs/
+notes/
+
+# Editor / tooling caches
+.cursor/
+.jupyter_tmp/
+.matplotlib/
+
+# Benchmark INPUT data (fetched/unzipped via setup.sh; see docs/SETUP.md) — not committed
+v1/
+
+# Generated experiment artifacts (regenerable; see docs/OUTPUT_STRUCTURE.md) — not committed
+output/
+walks/
+all_walks/
+seeds/
+method_proposal/
+plots/
+dbpedia_graph/
+wandb/
+mlruns/
+
+# Notebook paired run dirs are regenerable; we track the .ipynb, not the heavy output dirs
+notebooks/*/
+
+# Large binaries / archives / logs (fetched separately; see docs/SETUP.md) — not committed
+*.zip
+*.jar
+jars/
+*.log
+
+# LaTeX: version only thesis.tex, references.bib, tables/, and assets/; ignore build artifacts
+latex/**
+!latex/references.bib
+!latex/thesis.tex
+!latex/tables/
+!latex/tables/**
+!latex/assets/
+!latex/assets/**

@@ -1,0 +1,32 @@
+\begin{table}[p]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Per-test-case final LogReg test accuracy (epoch~5) for the four class-hierarchy initialization strategies on each protograph: the full breakdown behind the \texttt{Acc@final} column of Table~\ref{tab:init_strategies} (same fixed budget: $\dim=200$, 100 instance walks/entity, depth~3, $5{+}5$ epochs, $\lambda=0.5$, from-scratch fine-tuning rate $0.025$; single run per cell). Strategies are abbreviated \texttt{ms}~(\texttt{most\_specific}), \texttt{ai}~(\texttt{all\_init}), \texttt{ah}~(\texttt{average\_hier}), \texttt{wh}~(\texttt{weight\_hierarchy}); \texttt{van} is the from-scratch \texttt{vanilla} baseline (protograph-independent, identical across the three groups). The best of the twelve strategy cells in each row is in bold; the bottom row is the mean over the fifteen test cases and reproduces the \texttt{Acc@final} column of Table~\ref{tab:init_strategies}.}
+\label{tab:init_strategies_pertc}
+\begin{tabular}{l r *{4}{r} *{4}{r} *{4}{r}}
+\toprule
+ & & \multicolumn{4}{c}{P1} & \multicolumn{4}{c}{P2} & \multicolumn{4}{c}{P3} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}\cmidrule(lr){11-14}
+TC & \texttt{van} & \texttt{ms} & \texttt{ai} & \texttt{ah} & \texttt{wh} & \texttt{ms} & \texttt{ai} & \texttt{ah} & \texttt{wh} & \texttt{ms} & \texttt{ai} & \texttt{ah} & \texttt{wh} \\
+\midrule
+\texttt{tc01} & 0.963 & 0.922 & 0.495 & 0.477 & 0.477 & 0.910 & 0.905 & 0.905 & 0.925 & \textbf{0.935} & 0.922 & 0.535 & 0.927 \\
+\texttt{tc02} & 0.845 & 0.858 & 0.685 & 0.445 & 0.443 & 0.858 & 0.833 & 0.485 & \textbf{0.877} & 0.850 & 0.843 & 0.480 & 0.868 \\
+\texttt{tc03} & 0.945 & \textbf{0.932} & 0.485 & 0.492 & 0.492 & 0.925 & 0.930 & 0.500 & 0.777 & 0.693 & 0.710 & 0.492 & 0.522 \\
+\texttt{tc04} & 1.000 & 0.993 & 0.995 & 0.750 & 0.795 & 0.995 & 0.995 & 0.988 & \textbf{1.000} & 0.998 & 0.995 & 0.995 & 0.998 \\
+\texttt{tc05} & 0.858 & 0.943 & 0.927 & 0.935 & 0.938 & 0.925 & 0.938 & 0.932 & 0.935 & 0.948 & \textbf{0.950} & 0.938 & 0.938 \\
+\texttt{tc06} & 0.985 & 0.828 & 0.487 & 0.432 & 0.487 & 0.978 & \textbf{0.980} & 0.713 & 0.975 & 0.975 & 0.965 & 0.500 & 0.978 \\
+\texttt{tc07} & 0.583 & 0.535 & 0.485 & 0.482 & 0.482 & \textbf{0.610} & 0.535 & 0.468 & 0.547 & 0.502 & 0.525 & 0.490 & 0.485 \\
+\texttt{tc08} & 0.595 & 0.530 & 0.505 & 0.495 & 0.500 & \textbf{0.542} & \textbf{0.542} & 0.500 & 0.512 & 0.465 & 0.505 & 0.525 & 0.540 \\
+\texttt{tc09} & 0.657 & 0.632 & 0.450 & 0.460 & 0.470 & 0.632 & 0.640 & 0.477 & \textbf{0.680} & 0.623 & 0.625 & 0.460 & 0.470 \\
+\texttt{tc10} & 0.660 & 0.647 & \textbf{0.688} & 0.535 & 0.530 & 0.667 & 0.662 & 0.500 & 0.635 & 0.670 & \textbf{0.688} & 0.470 & 0.470 \\
+\texttt{tc11} & 0.603 & 0.625 & 0.490 & 0.470 & 0.495 & 0.660 & 0.642 & 0.642 & 0.615 & \textbf{0.680} & 0.677 & 0.450 & 0.472 \\
+\texttt{tc12} & 0.672 & 0.675 & 0.500 & 0.500 & 0.500 & 0.677 & 0.660 & 0.502 & \textbf{0.682} & 0.680 & 0.675 & 0.500 & 0.527 \\
+\texttt{tc13} & 0.525 & 0.544 & 0.506 & 0.500 & 0.500 & \textbf{0.553} & 0.527 & 0.496 & 0.494 & 0.507 & 0.514 & 0.514 & 0.517 \\
+\texttt{tc14} & 0.662 & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} \\
+\texttt{tc15} & 0.537 & 0.611 & \textbf{0.612} & 0.497 & 0.497 & 0.600 & 0.587 & 0.510 & 0.489 & 0.598 & 0.591 & 0.487 & 0.500 \\
+\midrule
+\textbf{mean} & 0.739 & 0.752 & 0.621 & 0.565 & 0.574 & 0.769 & 0.758 & 0.641 & 0.743 & 0.742 & 0.746 & 0.589 & 0.681 \\
+\bottomrule
+\end{tabular}
+\end{table}

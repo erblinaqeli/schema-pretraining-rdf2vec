@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering
+\caption{Protograph anchoring $\lambda$ sweep on the synthetic DLCC test cases \texttt{tc01}--\texttt{tc15}, under one fixed budget ($\dim=200$, 100 instance walks/entity, depth 3, $5+5$ epochs, codes normalized to $8$, finetune LR $0.0025$, seed 42; P1, P2 and P3 (classic) protograph transfers). \emph{Acc@final} is mean LogReg test accuracy after the 5th finetune epoch, averaged over all 15 test cases; $\Delta$ is the change relative to the un-anchored transfer ($\lambda=0$). \texttt{vanilla} is from-scratch RDF2vec. Anchoring does not help: mean accuracy decreases monotonically in $\lambda$ on every protograph.}
+\label{tab:anchoring_lambda}
+\begin{tabular}{llrr}
+\toprule
+Protograph & $\lambda$ & Acc@final & $\Delta$ vs $\lambda{=}0$ \\
+\midrule
+\texttt{vanilla} & -- & 0.735 & -- \\
+\midrule
+P1 & 0 & 0.740 & $+0.000$ \\
+ & 0.1 & 0.739 & $-0.002$ \\
+ & 0.25 & 0.735 & $-0.006$ \\
+ & 0.5 & 0.726 & $-0.014$ \\
+ & 0.75 & 0.720 & $-0.020$ \\
+ & 1 & 0.710 & $-0.031$ \\
+\midrule
+P2 & 0 & 0.768 & $+0.000$ \\
+ & 0.1 & 0.763 & $-0.005$ \\
+ & 0.25 & 0.757 & $-0.011$ \\
+ & 0.5 & 0.749 & $-0.020$ \\
+ & 0.75 & 0.723 & $-0.045$ \\
+ & 1 & 0.695 & $-0.073$ \\
+\midrule
+P3 & 0 & 0.738 & $+0.000$ \\
+ & 0.1 & 0.730 & $-0.008$ \\
+ & 0.25 & 0.725 & $-0.013$ \\
+ & 0.5 & 0.709 & $-0.029$ \\
+ & 0.75 & 0.689 & $-0.049$ \\
+ & 1 & 0.668 & $-0.069$ \\
+\bottomrule
+\end{tabular}
+\end{table}

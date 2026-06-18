@@ -1,0 +1,38 @@
+[project]
+name = "knowledge-graphs"
+version = "0.1.0"
+description = "Learning Knowledge Graphs & Graph Learning"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pyyaml>=6.0",
+    "gensim>=4.4.0",
+    "matplotlib>=3.10.8",
+    "pandas>=2.2,<2.4",
+    "rdflib>=7.0.0",
+    "scikit-learn>=1.4",
+    "torch>=2.2",
+    "tqdm>=4.66",
+    "optuna>=4.0.0",
+    "pyoxigraph>=0.5.7",
+    "pyarrow>=24.0.0",
+    "fastparquet>=2026.3.0",
+    "cudf-cu13>=26.4.0",
+    "cugraph-cu13>=26.4.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+url = "https://pypi.nvidia.com/"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+]

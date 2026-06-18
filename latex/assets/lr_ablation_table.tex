@@ -1,0 +1,33 @@
+\begin{table}[ht]
+\centering
+\small
+\caption{Fine-tuning learning-rate ablation for the classic (\texttt{all\_init}) transfer on the synthetic DLCC test cases \texttt{tc01}--\texttt{tc15}, under the fixed comparison budget ($\dim=200$, 100 instance walks/entity, depth 3, $5+5$ epochs, codes normalized to $8$ and mirrored into \texttt{syn1neg}, seed 42). Each cell is the final LogReg test accuracy after the 5th fine-tuning epoch. \emph{0.0025} is the protected rate used by the concept-bound variants; \emph{0.025} is the from-scratch rate. The \texttt{vanilla} column (LR 0.025) is the from-scratch baseline. The 0.0025 columns are from \texttt{synthetic\_compare} (\texttt{p1}/\texttt{p2}) and the \texttt{p3\_classic} run; the 0.025 columns are from the synthetic benchmark (the \texttt{p1}/\texttt{p2} values match the reruns of Table~\ref{tab:synthetic_final} to within run-to-run noise).}
+\label{tab:lr_ablation}
+\begin{tabular}{l rr rr rr c}
+\toprule
+ & \multicolumn{2}{c}{\texttt{p1\_classic}} & \multicolumn{2}{c}{\texttt{p2\_classic}} & \multicolumn{2}{c}{\texttt{p3\_classic}} & vanilla \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-8}
+TC & 0.0025 & 0.025 & 0.0025 & 0.025 & 0.0025 & 0.025 & 0.025 \\
+\midrule
+tc01 & 0.805 & 0.953 & 0.905 & 0.950 & 0.925 & 0.955 & 0.950 \\
+tc02 & 0.530 & 0.838 & 0.848 & 0.855 & 0.850 & 0.843 & 0.868 \\
+tc03 & 0.500 & 0.943 & 0.935 & 0.922 & 0.632 & 0.917 & 0.955 \\
+tc04 & 0.787 & 0.998 & 0.993 & 1.000 & 0.993 & 1.000 & 1.000 \\
+tc05 & 0.930 & 0.943 & 0.938 & 0.922 & 0.943 & 0.955 & 0.838 \\
+tc06 & 0.505 & 0.978 & 0.983 & 0.983 & 0.970 & 0.985 & 0.983 \\
+tc07 & 0.487 & 0.545 & 0.600 & 0.552 & 0.568 & 0.570 & 0.573 \\
+tc08 & 0.510 & 0.530 & 0.515 & 0.585 & 0.485 & 0.578 & 0.593 \\
+tc09 & 0.450 & 0.635 & 0.613 & 0.662 & 0.630 & 0.630 & 0.623 \\
+tc10 & 0.515 & 0.662 & 0.662 & 0.657 & 0.657 & 0.700 & 0.665 \\
+tc11 & 0.497 & 0.600 & 0.665 & 0.642 & 0.675 & 0.680 & 0.637 \\
+tc12 & 0.537 & 0.660 & 0.650 & 0.695 & 0.693 & 0.672 & 0.682 \\
+tc13 & 0.501 & 0.541 & 0.507 & 0.528 & 0.527 & 0.583 & 0.490 \\
+tc14 & 1.000 & 0.987 & 1.000 & 0.986 & 1.000 & 0.996 & 0.654 \\
+tc15 & 0.573 & 0.552 & 0.576 & 0.537 & 0.571 & 0.548 & 0.529 \\
+\midrule
+\textbf{Mean} & 0.609 & 0.758 & 0.759 & 0.765 & 0.741 & 0.774 & 0.736 \\
+\midrule
+$\Delta$ & \multicolumn{2}{c}{$-0.149$} & \multicolumn{2}{c}{$-0.006$} & \multicolumn{2}{c}{$-0.033$} & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+# Vanilla RDF2Vec (no protograph pretrain) — matches scripts/train.py defaults.
+# Use with: scripts/train.py --config conf/no_pretrain_default.yaml --train-mode vanilla
+
+finetune:
+  walks:
+    mode: jrdf2vec-duplicate-free
+    depth: 3
+    walks_per_entity: 200
+
+  word2vec:
+    architecture: skipgram
+    dim: 200
+    window: 5
+    lr: 0.025
+    min_alpha: 0.0001
+    negative: 5
+    min_count: 1
+    sample: 0.0
+    hs: 0
+    epochs: 5

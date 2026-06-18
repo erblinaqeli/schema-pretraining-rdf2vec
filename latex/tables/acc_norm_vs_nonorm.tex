@@ -1,0 +1,72 @@
+% Auto-generated: norm vs no-norm classic-init accuracy (synthetic DLCC, final-epoch test acc)
+\begin{longtable}{llrrr}
+\caption{Final test accuracy under the normalized (norm$=8$) vs.\ no-norm raw-mean protograph init, synthetic DLCC tc01--tc15. $\Delta=\text{acc}_{\text{no-norm}}-\text{acc}_{\text{norm}}$. Mean $|\Delta|$ over classic variants is 0.022 (max 0.078); the mean lies below the ${\approx}3$ percentage-point run-to-run noise threshold used throughout this thesis, so the normalization does not change final accuracy, only the loss trajectory.}\label{tab:norm-vs-nonorm-acc}\\
+\toprule
+TC & Variant & Acc$_{\text{norm}}$ & Acc$_{\text{no-norm}}$ & $\Delta$ \\
+\midrule
+\endfirsthead
+\toprule TC & Variant & Acc$_{\text{norm}}$ & Acc$_{\text{no-norm}}$ & $\Delta$ \\ \midrule \endhead
+tc01 & vanilla & 0.950 & 0.955 & +0.005 \\
+tc01 & p1\_classic & 0.948 & 0.922 & -0.025 \\
+tc01 & p2\_classic & 0.950 & 0.940 & -0.010 \\
+tc01 & p3\_classic & 0.955 & 0.940 & -0.015 \\
+tc02 & vanilla & 0.868 & 0.855 & -0.013 \\
+tc02 & p1\_classic & 0.838 & 0.830 & -0.008 \\
+tc02 & p2\_classic & 0.855 & 0.853 & -0.002 \\
+tc02 & p3\_classic & 0.843 & 0.848 & +0.005 \\
+tc03 & vanilla & 0.955 & 0.935 & -0.020 \\
+tc03 & p1\_classic & 0.943 & 0.940 & -0.003 \\
+tc03 & p2\_classic & 0.922 & 0.930 & +0.008 \\
+tc03 & p3\_classic & 0.917 & 0.953 & +0.035 \\
+tc04 & vanilla & 1.000 & 1.000 & +0.000 \\
+tc04 & p1\_classic & 0.998 & 1.000 & +0.002 \\
+tc04 & p2\_classic & 1.000 & 1.000 & +0.000 \\
+tc04 & p3\_classic & 1.000 & 1.000 & +0.000 \\
+tc05 & vanilla & 0.838 & 0.843 & +0.005 \\
+tc05 & p1\_classic & 0.943 & 0.865 & -0.078 \\
+tc05 & p2\_classic & 0.922 & 0.863 & -0.060 \\
+tc05 & p3\_classic & 0.955 & 0.943 & -0.012 \\
+tc06 & vanilla & 0.983 & 0.975 & -0.008 \\
+tc06 & p1\_classic & 0.978 & 0.985 & +0.007 \\
+tc06 & p2\_classic & 0.983 & 0.985 & +0.002 \\
+tc06 & p3\_classic & 0.985 & 0.988 & +0.003 \\
+tc07 & vanilla & 0.573 & 0.557 & -0.015 \\
+tc07 & p1\_classic & 0.545 & 0.578 & +0.032 \\
+tc07 & p2\_classic & 0.552 & 0.570 & +0.017 \\
+tc07 & p3\_classic & 0.570 & 0.593 & +0.023 \\
+tc08 & vanilla & 0.593 & 0.598 & +0.005 \\
+tc08 & p1\_classic & 0.530 & 0.603 & +0.073 \\
+tc08 & p2\_classic & 0.585 & 0.603 & +0.018 \\
+tc08 & p3\_classic & 0.578 & 0.605 & +0.027 \\
+tc09 & vanilla & 0.623 & 0.665 & +0.042 \\
+tc09 & p1\_classic & 0.635 & 0.623 & -0.012 \\
+tc09 & p2\_classic & 0.662 & 0.625 & -0.037 \\
+tc09 & p3\_classic & 0.630 & 0.630 & +0.000 \\
+tc10 & vanilla & 0.665 & 0.670 & +0.005 \\
+tc10 & p1\_classic & 0.662 & 0.672 & +0.010 \\
+tc10 & p2\_classic & 0.657 & 0.667 & +0.010 \\
+tc10 & p3\_classic & 0.700 & 0.700 & +0.000 \\
+tc11 & vanilla & 0.637 & 0.608 & -0.030 \\
+tc11 & p1\_classic & 0.600 & 0.623 & +0.023 \\
+tc11 & p2\_classic & 0.642 & 0.603 & -0.040 \\
+tc11 & p3\_classic & 0.680 & 0.610 & -0.070 \\
+tc12 & vanilla & 0.682 & 0.690 & +0.007 \\
+tc12 & p1\_classic & 0.660 & 0.590 & -0.070 \\
+tc12 & p2\_classic & 0.695 & 0.652 & -0.042 \\
+tc12 & p3\_classic & 0.672 & 0.655 & -0.017 \\
+tc13 & vanilla & 0.490 & 0.511 & +0.021 \\
+tc13 & p1\_classic & 0.541 & 0.504 & -0.037 \\
+tc13 & p2\_classic & 0.528 & 0.511 & -0.017 \\
+tc13 & p3\_classic & 0.583 & 0.526 & -0.057 \\
+tc14 & vanilla & 0.654 & 0.672 & +0.018 \\
+tc14 & p1\_classic & 0.987 & 1.000 & +0.013 \\
+tc14 & p2\_classic & 0.986 & 0.996 & +0.010 \\
+tc14 & p3\_classic & 0.996 & 1.000 & +0.004 \\
+tc15 & vanilla & 0.529 & 0.517 & -0.013 \\
+tc15 & p1\_classic & 0.552 & 0.547 & -0.006 \\
+tc15 & p2\_classic & 0.537 & 0.531 & -0.006 \\
+tc15 & p3\_classic & 0.548 & 0.527 & -0.021 \\
+\midrule
+\multicolumn{5}{l}{\small Mean $|\Delta|$: classic 0.022 (max 0.078); mean within the ${\approx}3$pp run-to-run noise threshold} \\
+\bottomrule
+\end{longtable}

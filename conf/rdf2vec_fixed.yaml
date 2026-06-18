@@ -1,0 +1,27 @@
+# RDF2Vec fixed configuration for DLCC synthetic ontology (e2e: no_pretrain, P1, P2).
+# NOTE: its consumer scripts/run_rdf2vec_fixed_e2e.py was removed in the scripts/ reorg; kept for reference.
+
+walks:
+  mode: jrdf2vec-duplicate-free
+  depth: 4
+  walks_per_entity: 100
+  token_format: angled
+  random_seed: 42
+
+word2vec:
+  architecture: skipgram
+  dim: 100
+  window: 3
+  lr: 0.01
+  min_alpha: 0.0001
+  min_count: 1
+  negative: 5
+  random_seed: 42
+  # Single corpus (--mode none): training epochs on instance walks only
+  epochs: 10
+  # Two-stage P1/P2: defaults fall back to `epochs` if omitted
+  pretrain_epochs: 10
+  finetune_epochs: 10
+  loss_every_steps: 100
+  loss_every_steps_pretrain: 1
+  loss_every_steps_finetune: 100

@@ -1,0 +1,39 @@
+# Finetune stabilization search (lr, initialization_noise, anchor_regularization).
+# Pretrain stage fixed; random search by default via scripts/search.py.
+
+pretrain:
+  walks:
+    mode: jrdf2vec-duplicate-free
+    depth: 3
+    walks_per_entity: 200
+
+  word2vec:
+    pretrain_epochs: 5
+    pretrain_lr: 0.025
+
+finetune:
+  walks:
+    mode: jrdf2vec-duplicate-free
+    depth: 3
+    walks_per_entity: 200
+
+  word2vec:
+    architecture: skipgram
+    dim: 200
+    window: 5
+    min_alpha: 0.0001
+    negative: 5
+    min_count: 1
+    finetune_epochs: 5
+    init_strategy: most_specific
+    init_relations: true
+    lr:
+      - 0.001
+      - 0.0001
+    initialization_noise:
+      - 0.001
+      - 0.01
+      - 0.0001
+    anchor_regularization:
+      - 0.001
+      - 0.0001
